@@ -12,7 +12,6 @@ import com.example.springboot.di.app.services.IService;
 public class IndexController {
 	
 	@Autowired
-	@Qualifier("MyServiceComplement")
 	private IService myService;
 
 	@GetMapping({ "", "/", "/index" })
