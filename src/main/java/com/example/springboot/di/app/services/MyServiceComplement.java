@@ -1,7 +1,5 @@
 package com.example.springboot.di.app.services;
 
-import org.springframework.stereotype.Component;
-
 //@Component("MyServiceComplement")
 public class MyServiceComplement implements IService {
 	
