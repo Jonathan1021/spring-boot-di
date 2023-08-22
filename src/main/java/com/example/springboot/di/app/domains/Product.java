@@ -5,6 +5,11 @@ public class Product {
 	private String name;
 	private Integer value;
 
+	public Product(String name, Integer value) {
+		this.name = name;
+		this.value = value;
+	}
+
 	public String getName() {
 		return name;
 	}

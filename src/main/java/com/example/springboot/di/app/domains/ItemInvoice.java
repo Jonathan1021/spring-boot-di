@@ -5,6 +5,11 @@ public class ItemInvoice {
 	private Product product;
 	private Integer cant;
 
+	public ItemInvoice(Product product, Integer cant) {
+		this.product = product;
+		this.cant = cant;
+	}
+
 	public Product getProduct() {
 		return product;
 	}
