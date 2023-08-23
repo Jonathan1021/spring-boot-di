@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import jakarta.annotation.PostConstruct;
+
 @Component
 public class Invoice {
 
@@ -17,6 +19,12 @@ public class Invoice {
 
 	@Autowired
 	private List<ItemInvoice> items;
+	
+	@PostConstruct
+	public void init() {
+		this.client.setName(this.client.getName().concat(" ").concat("Alfonso"));
+		this.description = this.getDescription().concat(" Factura concatenada ");
+	}
 
 	public String getDescription() {
 		return description;
