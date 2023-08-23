@@ -25,5 +25,9 @@ public class ItemInvoice {
 	public void setCant(Integer cant) {
 		this.cant = cant;
 	}
+	
+	public Integer calculated() {
+		return this.cant * this.product.getValue();
+	}
 
 }

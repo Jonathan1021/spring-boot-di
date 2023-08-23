@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class Invoice {
 
-	@Value("{invoice.description}")
-	private String description;
-
 	@Autowired
 	private Client client;
+	
+	@Value("${invoice.description}")
+	private String description;
 
 	@Autowired
 	private List<ItemInvoice> items;
@@ -41,4 +41,10 @@ public class Invoice {
 	public void setItems(List<ItemInvoice> items) {
 		this.items = items;
 	}
+
+	@Override
+	public String toString() {
+		return "Invoice [client=" + client.toString() + ", description=" + description + ", items=" + items.toString() + "]";
+	}
+	
 }

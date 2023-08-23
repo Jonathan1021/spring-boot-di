@@ -28,4 +28,9 @@ public class Client {
 		this.lastName = lastName;
 	}
 
+	@Override
+	public String toString() {
+		return "Client [name=" + name + ", lastName=" + lastName + "]";
+	}
+
 }
