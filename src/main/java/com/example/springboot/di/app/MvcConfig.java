@@ -11,13 +11,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class MvcConfig implements WebMvcConfigurer{
 	
 	@Autowired
-	@Qualifier("TimeElapsedInterceptor")
-	private HandlerInterceptor timeElapse;
+	@Qualifier("ScheduleInterceptor")
+	private HandlerInterceptor scheduleInterceptor;
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(timeElapse);
-	}
-
-	
+		registry.addInterceptor(scheduleInterceptor);
+	}	
 }

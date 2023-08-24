@@ -1,4 +1,4 @@
-package com.example.springboot.di.app.interfaces;
+package com.example.springboot.di.app.interceptors;
 
 import java.util.Random;
 
