@@ -8,9 +8,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
-
 @Component
 @RequestScope
 public class Invoice implements Serializable {
@@ -25,17 +22,6 @@ public class Invoice implements Serializable {
 
 	@Autowired
 	private List<ItemInvoice> items;
-	
-	@PostConstruct
-	public void init() {
-		this.client.setName(this.client.getName().concat(" ").concat("Alfonso"));
-		this.description = this.getDescription().concat(" Factura concatenada ");
-	}
-
-	@PreDestroy
-	public void destroy() {
-		System.out.println("Factura Destruida ".concat(description));
-	}
 	
 	public String getDescription() {
 		return description;
